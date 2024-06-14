@@ -1,0 +1,73 @@
+.app-container {
+  text-align: center;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.table-container {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.table-row {
+  display: flex;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.table-cell:not(:last-child) {
+  border-right: none;
+}
+
+.table-row:not(:last-child) .table-cell {
+  border-bottom: none;
+}
+
+/* 데스크톱 화면 크기에 대한 스타일 */
+@media only screen and (min-width: 1024px) {
+  .app-container {
+    max-width: 800px; /* 데스크톱에서 가운데 정렬을 위한 최대 너비 조정 */
+  }
+
+  .table-container {
+    max-width: 800px; /* 테이블 최대 너비 조정 */
+  }
+}
+
+/* 태블릿 화면 크기에 대한 스타일 */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .app-container {
+    max-width: 600px; /* 태블릿에서 가운데 정렬을 위한 최대 너비 조정 */
+  }
+
+  .table-container {
+    max-width: 600px; /* 테이블 최대 너비 조정 */
+  }
+}
+
+/* 모바일 화면 크기에 대한 스타일 */
+@media only screen and (max-width: 767px) {
+  .app-container {
+    max-width: 400px; /* 모바일에서 가운데 정렬을 위한 최대 너비 조정 */
+    padding: 5px; /* 모바일에서 내용 간격을 줄임 */
+  }
+
+  .table-container {
+    max-width: 400px; /* 테이블 최대 너비 조정 */
+  }
+
+  .table-cell {
+    padding: 5px; /* 모바일에서 셀의 패딩을 줄임 */
+  }
+}
